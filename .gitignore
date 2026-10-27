@@ -1,0 +1,29 @@
+# secrets and local configuration
+.env
+*.env.local
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node
+node_modules/
+frontend/dist/
+
+# user data: uploaded datasets, charts and generated reports never go into git
+storage/
+uploads/*
+reports/*
+!uploads/.gitkeep
+!reports/.gitkeep
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

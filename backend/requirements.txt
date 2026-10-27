@@ -1,0 +1,38 @@
+# --- web / API ---------------------------------------------------------------
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9
+pydantic>=2.7,<3
+pydantic-settings>=2.3
+email-validator>=2.1
+
+# --- database ----------------------------------------------------------------
+SQLAlchemy>=2.0.30,<3
+PyMySQL>=1.1
+cryptography>=42            # needed by PyMySQL for MySQL 8 caching_sha2_password
+alembic>=1.13
+
+# --- security ----------------------------------------------------------------
+argon2-cffi>=23.1
+PyJWT>=2.8
+
+# --- data analysis -----------------------------------------------------------
+pandas>=2.2
+numpy>=1.26
+scipy>=1.11                 # tukey_hsd and .confidence_interval() need 1.11+
+statsmodels>=0.14
+scikit-learn>=1.4
+matplotlib>=3.8
+seaborn>=0.13
+openpyxl>=3.1
+xlrd>=2.0                   # legacy .xls uploads
+
+# --- reports / AI ------------------------------------------------------------
+reportlab>=4.0
+python-docx>=1.1
+python-pptx>=1.0           # handover deck (client package)
+httpx>=0.27                 # AI provider calls and the test client
+truststore>=0.9               # use the operating system certificate store for outbound HTTPS
+
+# --- tests -------------------------------------------------------------------
+pytest>=8.0
